@@ -1,0 +1,71 @@
+#4.1
+    a)  65,536  bytes;
+    b)  32,768  words;
+    c)  524,288 bits;
+    d)  16      bits;
+    e)  The main memory is 65,520 bits bigger than the CPU;
+
+#4.2
+    a)  65,536 unary instructions;
+    b)  21,846 non-unary instructions;
+    c)  43,691 instructions;
+
+#4.6
+    A: 19AC
+    X: FE20
+    Mem[0A3F]: FF00
+    Mem[0A41]: 103D
+
+    a)  OPCODE:     C90A3F
+        A:          19AC
+        X:          FF00
+        Mem[0A3F]:  FF00
+        Mem[0A41]:  103D
+
+    b)  OPCODE:     D90A3F
+        A:          19AC
+        X:          FEFF 
+        Mem[0A3F]:  FF00
+        Mem[0A41]:  103D
+
+    c)  OPCODE:     F10A41  
+        A:          19AC
+        X:          FE20
+        Mem[0A3F]:  FF00
+        Mem[0A41]:  10AC
+
+    d)  OPCODE:     E10A41
+        A:          19AC
+        X:          FE20 
+        Mem[0A3F]:  FF00
+        Mem[0A41]:  19AC
+
+    e)  OPCODE:     690A3F
+        A:          19AC
+        X:          FE20
+        Mem[0A3F]:  FF00
+        Mem[0A41]:  103D
+
+    f)  OPCODE:     710A41
+        A:          096F
+        X:          FE20
+        Mem[0A3F]:  FF00
+        Mem[0A41]:  103D
+
+    g)  OPCODE:     890A3F
+        A:          19AC
+        X:          FE00
+        Mem[0A3F]:  FF00
+        Mem[0A41]:  103D
+
+    h)  OPCODE:     990A3F
+        A:          19AC
+        X:          FF20
+        Mem[0A3F]:  FF00
+        Mem[0A41]:  103D
+
+    i)  OPCODE:     06 
+        A:          E653
+        X:          FE20
+        Mem[0A3F]:  FF00
+        Mem[0A41]:  103D
