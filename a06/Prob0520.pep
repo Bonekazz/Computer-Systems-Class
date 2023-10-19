@@ -1,0 +1,16 @@
+LDBA 0x0025,d    ;H
+STBA 0xFC16,d
+LDBA 0x0026,d    ;i
+STBA 0xFC16,d
+LDBA 0x0027,d    ;e
+STBA 0xFC16,d
+LDBA 0x0028,d    ;r
+STBA 0xFC16,d
+LDBA 0x0029,d    ;r
+STBA 0xFC16,d
+LDBA 0x002A,d    ;o
+STBA 0xFC16,d
+
+STOP
+.ASCII "Hierro\x00"
+.END

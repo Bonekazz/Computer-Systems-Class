@@ -1,0 +1,14 @@
+#5.2
+    a) ANDA 0xB7DE,d
+    b) MOVFLAGA
+    c) LDBX 0x63DF,sfx
+
+#5.4
+    a) 6001FE
+    b) 4F000D
+    c) CB01FF
+
+#5.6
+    a) 0D
+    b) 46726F6700
+    c) FFFA
