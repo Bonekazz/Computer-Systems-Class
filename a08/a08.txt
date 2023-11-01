@@ -1,0 +1,23 @@
+#5.14
+    this, value:        0003;
+    that, value:        0005;
+    theOther, value:    0007;
+    Object Code:        12 00 07 00 11 00 13 39 00 03 39 00 05 00 zz
+
+#5.19
+    Run1:       B   (a C-to-assembly compiler written in assembly)
+            ->  A   (assembly language assembler written in machine code processing B)
+            ->  E   (the C-to-assembly compiler translated to machine code)
+
+    Run2:       C   (a C program to read data) 
+            ->  E   (the C-to-assembly compiler translated to machine code processing C)
+            ->  F   (the C program to read data translated to assembly)
+
+    run3:       F   (the C program to read data and print their median, translated to assembly)  
+            ->  A   (assembly language assembler written in machine code processing F)  
+            ->  G   (the C program to read data and print their median, translated to machine code)
+
+    run3:       D   (a data file)  
+            ->  G   (the C program to read data and print their median, translated to machine code)  
+            ->  H   (the median, in machine code)
+    
