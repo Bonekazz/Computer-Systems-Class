@@ -1,0 +1,17 @@
+#5.11
+    output: -413
+            98
+            0062
+            by
+
+#5.12
+    a)  object code: 38 00 6D D0 00 0A F1 FC 16 38 6D 6D D0 00 0A F1 FC 16 D0 00 26 F1 FC 16 00 zz
+        output: 109
+                28013
+                &
+    
+    b)  object code: 38 00 51 D0 00 0A F1 FC 16 38 FF C3 D0 00 0A F1 FC 16 D0 00 26 F1 FC 16 00 zz
+        output: 81
+                -61
+                &
+
