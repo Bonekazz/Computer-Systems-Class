@@ -1,0 +1,66 @@
+#7.1
+    "What can be automated?"
+
+#7.2
+    +, |
+
+#7.4
+    b) +ddd
+    I   => FM
+        => +M
+        => +dM
+        => +ddM
+        => +ddd
+
+#7.6
+    b)  a * ( + a ) - cannot be derived
+
+    d)  a * ( a + a ) - can be derived
+        E   => T
+            => T * F
+            => F * F
+            => a * F
+            => a * ( E )
+            => a * ( E + T )
+            => a * ( T + T )
+            =>* a * ( F + F)
+            => a * ( a + a )
+
+    f)  ( ( ( a ) ) ) - can be derived
+        E   => T
+            => F
+            => ( E )
+            => ( T )
+            => ( F )
+            => ( ( E ) )
+            =>* ( ( ( F ) ) )
+            => ( ( ( a ) ) )
+
+#7.7
+    b)  { if ( C1 )
+            if ( C2 )
+                S1 ;
+            else
+                S2 ;
+        S3 ;
+        }
+    Syntax tree:
+        <statement> => <compound-statement>
+                    => { <declaration-list> <statement-list> }
+                    => { <statement-list }
+                    => { <statement-list> <statement> }
+                    => { <statement> <statement> }
+                    => { <selection-statement> <statement> }
+                    => { if ( <expression> ) <statement> <statement> }
+                    => { if ( <expression> ) <selection-statement> <statement> }
+                    => { if ( <expression> ) if ( <expression> ) <statement> else <statement> <statement> }
+                    => { if ( <expression> ) if ( <expression> ) <expression-statement> else <statement> <statement> }
+                    => { if ( <expression> ) if ( <expression> ) <expression> ; else <statement> <statement> }
+                    => { if ( <expression> ) if ( <expression> ) <expression> ; else <expression-statement> <statement> }
+                    => { if ( <expression> ) if ( <expression> ) <expression> ; else <expression> ; <statement> }
+                    => { if ( <expression> ) if ( <expression> ) <expression> ; else <expression> ; <expression-statement> }
+                    => { if ( <expression> ) if ( <expression> ) <expression> ; else <expression> ; <expression> ; }
+                    =>* { if ( <identifier> ) if ( <identifier> ) <identifier> ; else <identifier> ; <identifier> ; }
+                    =>* { if ( <identifier> <digit> ) if ( <identifier> <digit> ) <identifier> <digit> ; else <identifier> <digit> ; <identifier> <digit> ; }
+                    =>* { if ( <letter> <digit> ) if ( <letter> <digit> ) <letter> <digit> ; else <letter> <digit> ; <letter> <digit> ; }
+                    =>* { if ( C1 ) if ( C2 ) S1 ; else S2 ; S3 ; }

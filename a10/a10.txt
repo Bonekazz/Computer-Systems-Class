@@ -1,0 +1,15 @@
+#7.11
+    a)  (1) Nondeterministic machine;
+        (2) There are no inacessible state;
+    b)  (1) Deterministic machine;
+        (2) There are no inacessible states;
+    c)  (1) Nondeterministic machine;
+        (2) There are no inacessible states;
+    d)  (1) Nondeterministic machine;
+        (2) Y is an inacessible state;
+
+#7.12
+    a)  before: W -b-> Z -ε-> (Y)
+        after:  W -b-> (Y) 
+    b)  before: W -b-> X -ε-> Z
+        after:  W -b-> Z
