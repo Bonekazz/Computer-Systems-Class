@@ -11,14 +11,19 @@ before:   (*check ***FSMmodel_before.png*** to see the FSM diagram of this imple
     // ALPHABET = COLUMNS
     const LETTER = 0;
     const DIGIT = 1;
-    const OTHER = 2;
 
     // State transition table
     const FSM = [
-        [ B, C, C ],
-        [ B, B, C ],
-        [ C, C, C ]
-    ];´
+        [ B, C ],
+        [ B, B ],
+        [ C, C, ]
+    ];
+
+    function isAlpha(c) {
+        let lowerc = c.toLowerCase();
+        return (lowerc >= 'a' && lowerc <= 'z');
+    }
+    ´
 
 after:   (*check ***FSMmodel_after.png*** to see the FSM diagram of this implementation*)
 
@@ -38,4 +43,12 @@ after:   (*check ***FSMmodel_after.png*** to see the FSM diagram of this impleme
         [ B, C, C ],
         [ B, B, C ],
         [ C, C, C ]
-    ];´
+    ];
+
+    function isValid(c) {
+        let lowerC = c.toLowerCase();
+        if (lowerC >= 'a' && lowerC <= 'z') return LETTER;
+        if (lowerC >= '0' && lowerC <= '9') return DIGIT;
+        return OTHER;
+    }
+    ´
