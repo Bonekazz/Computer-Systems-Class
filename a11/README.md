@@ -14,9 +14,9 @@ before:   (*check ***FSMmodel_before.png*** to see the FSM diagram of this imple
 
     // State transition table
     const FSM = [
-        [ B, C ],
-        [ B, B ],
-        [ C, C, ]
+        [ B, C ],    // State B has transition to B, if the char is a letter, and to C if it's a digit;
+        [ B, B ],    // State B has transition to B, if the char is a letter, and to C if it's a digit ;  
+        [ C, C, ]    // State C has transition to C, if the char is a letter, and to C if it's a digit ;
     ];
 
     function isAlpha(c) {
@@ -40,9 +40,9 @@ after:   (*check ***FSMmodel_after.png*** to see the FSM diagram of this impleme
 
     // State transition table
     const FSM = [
-        [ B, C, C ],
-        [ B, B, C ],
-        [ C, C, C ]
+        [ B, C, C ],    // State B has transition to B, if the char is a letter, to C if it's a digit, and to C if it's another char;
+        [ B, B, C ],    // State B has transition to B, if the char is a letter, to B if it's a digit, and to C if it's another char;
+        [ C, C, C ]     // State C has transition to C, if the char is a letter, to C if it's a digit, and to C if it's another char;
     ];
 
     function isValid(c) {
