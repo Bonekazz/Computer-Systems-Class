@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "e": "ts-node ./src/main.ts",
+    "make": "tsc .src/main.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
