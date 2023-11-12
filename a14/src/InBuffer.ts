@@ -1,26 +1,26 @@
 export default class InBuffer {
 
-    private inString: string;                 // the whole string
-    private line: string = "";           // one line
-    private lineIndex: number = 0;      // where you are at the line;
+    private inputString: string;  
+    private line: string = "";           
+    private lineIndex: number = 0;      
     
     constructor(string: string) {
-        this.inString = string + "\n\n";    // To guarantee inString.length === 0 eventualy;
+        this.inputString = string + "\n\n";    // To guarantee inString.length === 0 eventualy;
     }
 
-    getLine(): void{
-        const i = this.inString.indexOf('\n');              // detects the first line by getting the index of the first appearence of '\n' in the whole string;
-        this.line = this.inString.substring(0, (i + 1));    // gets that first line;
-        this.inString = this.inString.substring((i + 1));        // cuts off the first line of the whole string
+    cutFirstLine(): void{
+        const i = this.inputString.indexOf('\n'); 
+        this.line = this.inputString.substring(0, (i + 1));    
+        this.inputString = this.inputString.substring((i + 1));        
         this.lineIndex = 0;
     }
 
     inputRemains(): boolean{
-        return this.inString.length !== 0;
+        return this.inputString.length !== 0;
     }
 
-    advanceInput(): string{
-        return this.line[ this.lineIndex++ ];
+    returnAndAdvanceInput(): string{
+        return this.line[ this.lineIndex++ ];   // returning the value and then incrementing lineIndex;
     }
 
     backUpInput(): void{

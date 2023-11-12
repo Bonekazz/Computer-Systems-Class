@@ -19,7 +19,7 @@ export default class Tokenizer {
         let state = LexState.START;
 
         do {
-            nextChar = this.b.advanceInput();
+            nextChar = this.b.returnAndAdvanceInput();
             switch (state) {
                 case LexState.START:
                     if (nextChar === "0") {

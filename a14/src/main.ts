@@ -46,10 +46,10 @@ fs.readFile('./test/text.txt', 'utf8', (err, data) => {
 // })
 
 function actionPerformed(data: string) {
-    const inBuffer = new InBuffer(data);               // Takes the whole user input string and give to the buffer
-    const tokenizer = new Tokenizer(inBuffer);      // Tokenize all the content of the buffer
+    const inBuffer = new InBuffer(data);           
+    const tokenizer = new Tokenizer(inBuffer);      
     let aToken: AToken;
-    inBuffer.getLine();
+    inBuffer.cutFirstLine();
 
     while (inBuffer.inputRemains()) {
 
@@ -60,6 +60,6 @@ function actionPerformed(data: string) {
 
         } while (!(aToken instanceof TEmpty) && !(aToken instanceof TInvalid));
 
-        inBuffer.getLine();
+        inBuffer.cutFirstLine();
     }
 }
