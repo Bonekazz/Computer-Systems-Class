@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int product, n, m;
+
+void times(int *prod, int mpr, int mcand) {
+    *prod = 0;
+    while (mpr != 0) {
+        if (mpr % 2 == 1) {
+            *prod = *prod + mcand;
+        }
+        mpr /= 2;
+        mcand *= 2;
+    }
+}
+
+int main () {
+    scanf("%d %d", &n, &m);
+    times(&product, n, m);
+    printf("Product: %d\n", product);
+    return 0;
+}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            BR          main
+
+product:    .BLOCK      2                   ;global variable #2d
+n:          .BLOCK      2                   ;global variable #2d
+m:          .BLOCK      2                   ;global variable #2d
+
+;--------- void times(int *prod, int mpr, int mcand)
+mcand:      .EQUATE     2
+mpr:        .EQUATE     4 
+prod:       .EQUATE     6
+times:
+
+;--------- int main()
+main:       DECI        n,          d
+            DECI        m,          d 
+            LDWA        product,    i
+            STWA        -2,         s
+            LDWA        n,          d
+            STWA        -4,         s
+            LDWA        m,          d 
+            STWA        -6,         s
+            SUBSP       6,          i       ;push #prod #mpr #mcand 
