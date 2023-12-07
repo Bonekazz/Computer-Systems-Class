@@ -8,7 +8,7 @@
 
     [x] - Assignment 20
 
-    [_] - Assignment 21
+    [X] - Assignment 21
         2. Do Problem 6.24.
             Name your program Prob0624.pep. Hand in the .pep source file electronically per the instructions for
             your course.
