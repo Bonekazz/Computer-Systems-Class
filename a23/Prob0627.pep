@@ -1,34 +1,3 @@
-#include <stdio.h>
-
-int list[16];
-int j, numItems;
-int temp;
-
-int main() {
-    scanf("%d", &numItems);
-
-    for (j = 0; j < numItems; j++) {
-        scanf("%d", &list[j]);
-    }
-
-    temp = list[0];
-
-    for (j = 0; j < numItems - 1; j++) {
-        list[j] = list[j + 1];
-    }
-
-    list[numItems - 1] = temp;
-
-    for (j = 0; j < numItems; j++) {
-        printf("%d ", list[j]);
-    }
-
-    printf("\n");
-    
-    return 0;
-}
-
-==================================================
 
         BR          main
 list:       .BLOCK      32                  ;global #2d16a
