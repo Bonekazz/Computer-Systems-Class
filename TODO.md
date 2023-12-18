@@ -1,4 +1,4 @@
-## Current Lecture: 37 at 00:00
+## Current Lecture: 37 at 27:44
 
 # TODO
 
