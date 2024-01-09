@@ -1,4 +1,4 @@
-## Current Lecture: 38 at 13:48 
+## End of Lectures 
 
 # TODO
 
@@ -13,3 +13,5 @@
     [X] - Assignment 22
 
     [x] - Assignment 23
+
+    [ ] - Assignment 24
