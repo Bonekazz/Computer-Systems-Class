@@ -14,4 +14,6 @@
 
     [x] - Assignment 23
 
-    [ ] - Assignment 24
+    [x] - Assignment 24
+
+## End of Course
